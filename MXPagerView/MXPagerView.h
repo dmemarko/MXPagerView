@@ -1,6 +1,6 @@
 // MXPagerView.h
 //
-// Copyright (c) 2017 Maxime Epain
+// Copyright © 2019 Maxime Epain
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -159,6 +159,12 @@ typedef NS_ENUM(NSInteger, MXPagerViewTransitionStyle) {
  Reloads everything from scratch. redisplays pages.
  */
 - (void)reloadData;
+
+/**
+ Force load page at specified index.
+ Loads index-1 & index+1 if transitionStyle is set to .scroll as well.
+ */
+- (void)loadPageAtIndex:(NSInteger)index;
 
 /**
  Shows through the pager until a page identified by index is at a particular location on the screen.
